@@ -22,8 +22,12 @@ img {
 
 /* 頁首區 */
 header {
+    padding: 15px 50px;
     display: flex;
     /* 控制子元素 並不是自己(header) */
+    justify-content: space-between;/* 主軸對齊方式:貼齊左右自動均分 */
+    align-items: center;/* 副軸(垂直)置中 */
+
 }
 
 header .logo {
