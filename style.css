@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* 第一行必須是定義編碼 */
+body,
+h1,
+ul {
+    margin: 0;
+    /* 清除預設間距 */
+}
+
+ul {
+    /* 清除預設樣式 */
+    list-style-type: none;
+    padding: 0;
+
+}
+
+img {
+    display: block;
+    /* 取消imline-block預設空白 */
+}
+
+/* 頁首區 */
+header {
+    display: flex;
+    /* 控制子元素 並不是自己(header) */
+}
+
+header .logo {
+    width: 120px;
+}
+
+nav li {
+    /* nav裡的li */
+    float: left;
+    /* 浮動靠左(左到右) */
+    margin-left: 15px;
+}
+
+main {
+    clear: both;
+    /* 使用浮動會浮起來 父會變零 會影響到後面的排版 
+    因此需清除浮動(float)造成的排版錯誤 */
+}

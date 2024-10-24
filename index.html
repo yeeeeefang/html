@@ -5,23 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IKEA宜家家居</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css"><!-- //打CSS要看有沒有連線 -->
 </head>
 
 <body>
     <!-- 頁首區 -->
     <header>
         <!-- LOGO -->
-        <h1>
+        <h1 class="logo">
             <!-- 連回首頁 -->
             <a href="index.html">
+                <!-- SVG圖檔，預設抓父元素的寬度 -->
                 <img src="./images/IKEA_logo.svg" alt="">
             </a>
         </h1>
+        <!-- 導覽列 -->
+        <nav>
+            <ul><!-- ul下層一定要有li -->
+                <li><a href="#">產品</a></li>
+                <li><a href="#">空間</a></li>
+                <li><a href="#">佈置靈感</a></li>
+                <li><a href="#">新品專區</a></li>
+                <li><a href="#">最新活動</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- 主要內容 -->
-    <main></main>
+    <main>
+        <!-- <ul>ul下層一定要有li
+            <li><a href="#">產品</a></li>
+            <li><a href="#">空間</a></li>
+            <li><a href="#">佈置靈感</a></li>
+            <li><a href="#">新品專區</a></li>
+            <li><a href="#">最新活動</a></li>
+        </ul> -->
+    </main>
 
     <!--頁尾區 -->
     <footer></footer>
