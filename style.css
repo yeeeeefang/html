@@ -17,16 +17,33 @@ ul {
 
 img {
     display: block;
-    /* 取消imline-block預設空白 */
+    /* 取消inline-block預設空白 */
+    width: 100%; /* 自動抓父元素的寬度 */
 }
 
-/* 頁首區 */
+a{
+    color: rgb(10, 27, 82);
+    text-decoration: none;
+}
+
+a:hover{ /* 滑鼠移到超連結會出現的互動 */
+    color: rgb(255, 208, 0);
+    text-decoration:underline wavy;
+    /* text-decoration-line: underline;因為上面已經取消 所以這邊加回來 */
+    /* text-decoration-style:wavy ;  樣式 */
+}
+a:active{ /* 滑鼠點擊時會有的互動 */
+    color: brown;
+}
+/* 頁首區 */  
 header {
     padding: 15px 50px;
     display: flex;
     /* 控制子元素 並不是自己(header) */
-    justify-content: space-between;/* 主軸對齊方式:貼齊左右自動均分 */
-    align-items: center;/* 副軸(垂直)置中 */
+    justify-content: space-between;
+    /* 主軸對齊方式:貼齊左右自動均分 */
+    align-items: center;
+    /* 副軸(垂直)置中 */
 
 }
 
@@ -45,4 +62,13 @@ main {
     clear: both;
     /* 使用浮動會浮起來 父會變零 會影響到後面的排版 
     因此需清除浮動(float)造成的排版錯誤 */
+    padding: 0 50px;
+}
+
+#banner {
+    /* padding: 0 50px; 已經往main移了*/
+}
+
+section{
+    max-width: 1366px; /* 1300.1400.1366.1500 */
 }
