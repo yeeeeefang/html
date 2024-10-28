@@ -47,8 +47,8 @@ header {
 
 }
 
-header .logo {
-    width: 120px;
+header .logo { /* hearder 裡面的logo */
+    width: 120px; /* SVG圖檔，預設抓富元素的寬度 */
 }
 
 nav li {
@@ -70,5 +70,31 @@ main {
 }
 
 section{
-    max-width: 1366px; /* 1300.1400.1366.1500 */
+   /*  max-width: 1400px; */ /* 1300.1400.1366.1500 */
+    width: 100%;
+}
+#restaurant{
+    display: flex;
+}
+#restaurant figure{
+    flex: 1;
+    /* margin: 0; */
+}
+#restaurant div{
+    flex: 1.2;
+}
+#restaurant p{
+    line-height: 1.5;/* 行高不給單位即為倍數 行高盡量給倍數 */
+}
+#api{
+    display: flex;
+}
+#api div{
+    flex: 1;
+    margin: 20px;  /*  第一個方法是直接給固定間距 */
+
+}
+#api iframe{
+    width: 100%;
+    height: 400px;
 }
