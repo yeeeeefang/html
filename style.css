@@ -52,7 +52,7 @@ a:active{ /* 滑鼠點擊時會有的互動 */
 
 }
 
-#topbar.logo { 
+#topbar .logo { 
     width: 120px; /* SVG圖檔，預設抓富元素的寬度 */
 }
 
@@ -76,7 +76,8 @@ main {
 
 section{
     max-width: 1400px; /* 1300.1400.1366.1500 */
-    width: 100%/*  */;
+    margin: 0 auto ;
+    /* width: 100%; */
 }
 .title h2{
     font-size: 1.4rem;
