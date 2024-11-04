@@ -2,6 +2,12 @@
 
 /* 第一行必須是定義編碼 */
 /*重製區 */
+*{/* 全域標籤 */
+    box-sizing: border-box;/* 不累加邊框與內距 */
+}
+body{
+    color: var(--text);
+}
 body,
 h1,
 ul {
@@ -23,21 +29,28 @@ img {
 }
 
 a{
-    color: rgb(10, 27, 82);
+    color: var(--primary-1);
     text-decoration: none;
 }
 
 a:hover{ /* 滑鼠移到超連結會出現的互動 */
-    color: rgb(255, 208, 0);
+    color: var(--primary-1);
     text-decoration:underline wavy;
     /* text-decoration-line: underline;因為上面已經取消 所以這邊加回來 */
     /* text-decoration-style:wavy ;  樣式 */
 }
 a:active{ /* 滑鼠點擊時會有的互動 */
-    color: brown;
+    color:var(--active);
 }
 /* 變數區 */
-
+:root {
+    --primary-1:#0123b9;
+    --primary-2:#eec042;
+    --primary-3:#5e2a0d;
+    --link: #555;
+    --text: #444444;
+    --active: red;
+}
 
 
 /* 頁首區 */  
@@ -62,6 +75,13 @@ nav li {
     /* 浮動靠左(左到右) */
     margin-left: 15px;
 }
+/* 手機版 */
+@media(max-width:640px){
+    #topbar{
+        padding: 15px 20px;
+    }
+}
+
 /* 主要內容共用區 */
 main {
     clear: both;
@@ -70,9 +90,7 @@ main {
     padding: 0 50px;
 }
 
-#banner {
-    /* padding: 0 50px; 已經往main移了*/
-}
+
 
 section{
     max-width: 1400px; /* 1300.1400.1366.1500 */
@@ -84,6 +102,7 @@ section{
     margin: 0;
 }
 .title h2 span{
+    color: var(--primary-1);
     font-size: 1rem;
     margin-left: 10px;
 }
@@ -91,6 +110,12 @@ section{
     font-size: 1.1rem;
     font-weight: normal;
     margin: 10px 0;
+}
+/* 手機版 */
+@media(max-width:640px){
+    main{
+        padding: 0 20px;
+    }
 }
 
 /* 餐廳 */
@@ -107,6 +132,23 @@ section{
 #restaurant p{
     line-height: 1.5;/* 行高不給單位即為倍數 行高盡量給倍數 */
 }
+/* 平板 */
+@media(max-width:1023px){
+    #restaurant figure{
+        margin: 15px 20px 0 0;
+
+    }
+}
+/* 手機 */
+@media(max-width:640px){
+    #restaurant{
+        flex-direction: column;
+    }
+    #restaurant figure{
+        margin-top: 30px;
+    }
+}
+
 /* 串接API */
 #api{
     display: flex;
@@ -120,8 +162,81 @@ section{
     width: 100%;
     height: 400px;
 }
+
+/* 平板 */
+@media (max-width:1023px){
+    #api{
+        flex-direction: column;
+    }
+}
+/* 手機 */
+@media(max-width:640px){
+    #api div{
+        margin: 10px 0;
+    }
+    #api iframe{
+        height: 200px;
+    }
+}
+
+/* 列表 */
+.listbox {
+    display: flex;
+}
+.listbox article {
+    flex: 1;
+    margin: 0 15px;
+    background-color: var(--primary-2);
+}
+.listbox figure {
+    margin: 0;
+    height: 280px;/* h280 簡寫 */
+}
+.listbox .content{
+    padding: 20px; /* 圖片不貼邊 設定字而已 */
+}
+.listbox img {
+    /* 重置區已經設定過w100% 一定要設定*/
+    height: 100%;
+    object-fit: cover; /* cover  短邊滿版，長邊剪裁 
+                        contain 長邊滿版，短邊等比例縮放*/
+}
+.listbox .content {
+    padding: 20px;
+}
+@media (max-width:1023px){
+    .listbox article:last-child{ /* 三欄變兩欄 */
+        display: none;/* 不要顯示 */
+    }
+}
+/* 手機版 */
+@media(max-width:640px){
+    .listbox{
+        flex-direction: column;
+    }
+    .listbox article{
+        margin:15px 0;
+    }
+}
+
 footer{
     text-align: center;
     margin: 30px 0;
 }
-/* 最新消息 */
+
+
+
+/* RWD斷點 */
+/* 桌機 */
+@media(min-width:1024px){
+
+}
+/* 平板 */
+@media (max-width:1023px){
+
+}
+
+/* 手機版 */
+@media(max-width:640px){
+
+}
